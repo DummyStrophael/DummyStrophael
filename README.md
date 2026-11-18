@@ -24,7 +24,7 @@
 <h3 align="center"><code>⟨ 01 ⟩&nbsp; WHOAMI</code></h3>
 
 <p align="center">
-  <img src="assets/terminal.svg" width="100%" alt="terminal — whoami" />
+  <img src="assets/console.svg" width="100%" alt="terminal — whoami" />
 </p>
 
 <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -65,7 +65,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/arsenal.svg" width="100%" alt="tech arsenal" />
+  <img src="assets/skills.svg" width="100%" alt="tech arsenal" />
 </p>
 
 <h3 align="center"><code>⟨ 04 ⟩&nbsp; PROJECTS</code></h3>
@@ -147,7 +147,7 @@
 </blockquote>
 
 <p align="center">
-  <img src="assets/footer.svg" width="100%" alt="STAY HUNGRY. STAY CURIOUS." />
+  <img src="assets/outro.svg" width="100%" alt="STAY HUNGRY. STAY CURIOUS." />
 </p>
 
 <p align="center">

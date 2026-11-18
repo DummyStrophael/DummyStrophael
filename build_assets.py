@@ -449,7 +449,7 @@ def terminal() -> None:
 {rows}
 </svg>
 """
-    save("terminal.svg", head(W, H, "Terminal - whoami") + body)
+    save("console.svg", head(W, H, "Terminal - whoami") + body)
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -628,7 +628,7 @@ def arsenal() -> None:
 {"".join(rows)}
 </svg>
 """
-    save("arsenal.svg", head(W, H, "Tech arsenal") + body)
+    save("skills.svg", head(W, H, "Tech arsenal") + body)
 
 
 # ══════════════════════════════════════════════════════════════════════════
@@ -829,7 +829,7 @@ def footer() -> None:
 <text x="640" y="150" text-anchor="middle" font-family="{MONO}" font-size="10"
       letter-spacing="3" fill="#55657C">BUILT WITH CAFFEINE · POWERED BY CURIOSITY</text>
 """
-    save("footer.svg", head(W, H, "footer") + body + "</svg>\n")
+    save("outro.svg", head(W, H, "footer") + body + "</svg>\n")
 
 
 if __name__ == "__main__":
