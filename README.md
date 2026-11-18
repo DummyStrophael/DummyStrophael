@@ -3,6 +3,7 @@
    DummyStrophael · PROFILE README  ·  theme: NIGHT CITY GRID / AUDIO LINK
    改文字  → 直接改这个文件
    改横幅 / 音乐卡 / 卡片 / 配色 → 改 build_assets.py，然后 python build_assets.py
+   上线步骤 → 使用说明.md
   ═══════════════════════════════════════════════════════════════════════
 -->
 
@@ -39,7 +40,7 @@
 </p>
 
 <p align="center">
-  <sub>最喜欢的歌是天外来物，最喜欢的歌手是薛之谦</sub>
+  <sub>1125 首收藏里播放最多的 19 首 · 点卡片进歌单页</sub>
 </p>
 
 <h3 align="center"><code>⟨ 03 ⟩&nbsp; ARSENAL</code></h3>
@@ -73,11 +74,11 @@
 </table>
 
 <p align="center">
-  <sub>▸ 在折腾 · 给VMware装上黑苹果</sub>
+  <sub>▸ 在折腾 · 手写一个能跑的小虚拟机 · 用 C++ 重写一个命令行工具 · 读完 SICP</sub>
 </p>
 
 <details>
-  <summary><b>&lt;05&gt; ARCHIVE</b> · 我喜欢 · 前 19 首</summary>
+  <summary><b>&lt;05&gt; ARCHIVE</b> · 我喜欢 · 前 19 首（点开）</summary>
 
 <br/>
 
@@ -108,7 +109,7 @@
 </details>
 
 <details>
-  <summary><b>&lt;06&gt; TELEMETRY</b> · 数据面板</summary>
+  <summary><b>&lt;06&gt; TELEMETRY</b> · 数据面板（点开）</summary>
 
 <br/>
 
@@ -128,9 +129,8 @@
 </details>
 
 <blockquote>
-  <p><samp>// 我不仅仅要运行程序，我还要定义它的法则</samp><br/>
-  <samp>// 写下逻辑，就要接受意料之外的返回</samp><br/>
-  <samp>//运行之前，所有都是我的构想</samp><br/></p>
+  <p><samp>// 代码写给未来</samp><br/>
+  <samp>// 今天，先写下一行</samp></p>
 </blockquote>
 
 <p align="center">
