@@ -142,8 +142,8 @@
 </details>
 
 <blockquote>
-  <p><samp>// 我是那种会为一个变量名纠结十分钟的人。</samp><br/>
-  <samp>// 把想法写成代码，把代码变成作品。</samp></p>
+  <p><samp>// 代码写给未来</samp><br/>
+  <samp>// 今天，先写下一行</samp></p>
 </blockquote>
 
 <p align="center">
