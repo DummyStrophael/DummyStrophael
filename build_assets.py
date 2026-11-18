@@ -453,6 +453,64 @@ def terminal() -> None:
 
 
 # ══════════════════════════════════════════════════════════════════════════
+#  02b · ABOUT PANEL（翻译插件也改不动的“规格面板”）
+# ══════════════════════════════════════════════════════════════════════════
+ABOUT_LEFT = [
+    ("NOW", "白天写业务，晚上折腾底层"),
+    ("LEARN", "编译器 / 图形学 / 分布式"),
+    ("BUILD", "一个跑在自己机器上的小程序"),
+    ("BELIEF", "优雅的抽象比聪明的代码稀缺"),
+]
+ABOUT_RIGHT = [
+    ("LOOP", "薛之谦 · 华语流行 · Lo-fi"),
+    ("GEAR", "VS Code · Windows Terminal · Git Bash"),
+    ("FUEL", "冰美式 × 2"),
+    ("COORD", "中国"),
+]
+
+
+def about() -> None:
+    W, H = 1000, 180
+    ROW_Y = [58, 92, 126, 160]
+    CHIP_H = 21
+
+    def rows(items, x0, color):
+        out = []
+        for (label, text), y in zip(items, ROW_Y):
+            cw = round(len(label) * 6.9 + 20)
+            out.append(
+                f'<rect x="{x0}" y="{y - 15.5}" width="{cw}" height="{CHIP_H}" rx="4" '
+                f'fill="{color}" fill-opacity=".08" stroke="{color}" stroke-opacity=".42"/>'
+                f'<text x="{x0 + cw / 2:.1f}" y="{y + 0.5}" text-anchor="middle" '
+                f'font-family="{MONO}" font-size="9.5" letter-spacing="1.2" fill="{color}">{label}</text>'
+                f'<text x="{x0 + cw + 12}" y="{y + 1}" font-family="{CJK}" font-size="12.5" '
+                f'letter-spacing=".3" fill="#C3CFDF">{text}</text>'
+            )
+        return "".join(out)
+
+    body = f"""<defs>
+  <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0A0A12"/>
+    <stop offset="1" stop-color="#07070E"/>
+  </linearGradient>
+  <linearGradient id="ptop" x1="0" y1="0" x2="1000" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="{CYAN}" stop-opacity="0"/>
+    <stop offset=".35" stop-color="{CYAN}" stop-opacity=".55"/>
+    <stop offset=".65" stop-color="{VIOLET}" stop-opacity=".5"/>
+    <stop offset="1" stop-color="{CRIMSON}" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="12" fill="url(#pbg)" stroke="{EDGE}"/>
+<rect x="120" y=".5" width="760" height="1" fill="url(#ptop)"/>
+<path d="M500 30V150" stroke="{EDGE}" stroke-dasharray="2 6"/>
+{rows(ABOUT_LEFT, 30, CYAN)}
+{rows(ABOUT_RIGHT, 520, VIOLET)}
+</svg>
+"""
+    save("about.svg", head(W, H, "Profile spec - now / learn / build / belief / loop / gear / fuel / coord") + body)
+
+
+# ══════════════════════════════════════════════════════════════════════════
 #  03 · MUSIC CARD
 # ══════════════════════════════════════════════════════════════════════════
 CJK = "'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif"
@@ -836,6 +894,7 @@ if __name__ == "__main__":
     print("building assets ...")
     hero()
     terminal()
+    about()
     music_card()
     arsenal()
     project_cards()

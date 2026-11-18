@@ -27,22 +27,9 @@
   <img src="assets/console.svg" width="100%" alt="terminal — whoami" />
 </p>
 
-<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <code>NOW</code> · 白天写业务，晚上折腾底层<br/>
-      <code>LEARN</code> · 编译器 / 图形学 / 分布式<br/>
-      <code>BUILD</code> · 一个跑在自己机器上的小程序<br/>
-      <code>BELIEF</code> · 优雅的抽象比聪明的代码稀缺
-    </td>
-    <td width="50%" valign="top">
-      <code>LOOP</code> · 薛之谦 · 华语流行 · Lo-fi<br/>
-      <code>GEAR</code> · VS Code · Windows Terminal · Git Bash<br/>
-      <code>FUEL</code> · 冰美式 × 2<br/>
-      <code>COORD</code> · 中国
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="assets/about.svg" width="100%" alt="NOW 白天写业务，晚上折腾底层 · LEARN 编译器/图形学/分布式 · BUILD 跑在自己机器上的小程序 · BELIEF 优雅的抽象比聪明的代码稀缺 · LOOP 薛之谦 · GEAR VS Code / Windows Terminal / Git Bash · FUEL 冰美式 × 2 · COORD 中国" />
+</p>
 
 <h3 align="center"><code>⟨ 02 ⟩&nbsp; AUDIO LINK</code></h3>
 
