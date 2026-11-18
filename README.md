@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/about.svg" width="100%" alt="NOW 白天写业务，晚上折腾底层 · LEARN 编译器/图形学/分布式 · BUILD 跑在自己机器上的小程序 · BELIEF 优雅的抽象比聪明的代码稀缺 · LOOP 薛之谦 · GEAR VS Code / Windows Terminal / Git Bash · FUEL 冰美式 × 2 · COORD 中国" />
+  <img src="assets/about.svg" width="100%" alt="NOW 白天学编程，晚上折腾网络安全 · LEARN 编译器/图形学/分布式 · BUILD 一个文本阅读器 · BELIEF 优雅的抽象比聪明的代码稀缺 · LOOP 薛之谦 · GEAR VS Code / Windows Terminal / Git Bash · FUEL 冰美式 × 2 · COORD 中国" />
 </p>
 
 <h3 align="center"><code>⟨ 02 ⟩&nbsp; AUDIO LINK</code></h3>
@@ -40,7 +40,7 @@
 </p>
 
 <p align="center">
-  <sub>1125 首收藏里播放最多的 19 首 · 点卡片进歌单页</sub>
+  <sub>最喜欢的歌是天外来物，最喜欢的歌手是薛之谦</sub>
 </p>
 
 <h3 align="center"><code>⟨ 03 ⟩&nbsp; ARSENAL</code></h3>
@@ -74,7 +74,7 @@
 </table>
 
 <p align="center">
-  <sub>▸ 在折腾 · 手写一个能跑的小虚拟机 · 用 C++ 重写一个命令行工具 · 读完 SICP</sub>
+  <sub>▸ 在折腾 · 给VMware装上黑苹果</sub>
 </p>
 
 <details>
@@ -129,8 +129,9 @@
 </details>
 
 <blockquote>
-  <p><samp>// 代码写给未来</samp><br/>
-  <samp>// 今天，先写下一行</samp></p>
+  <p><samp>// 我不仅仅要运行程序，我还要定义它的法则</samp><br/>
+  <samp>// 写下逻辑，就要接受意料之外的返回</samp><br/>
+  <samp>//运行之前，所有都是我的构想</samp><br/></p>
 </blockquote>
 
 <p align="center">
