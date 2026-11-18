@@ -507,7 +507,7 @@ def about() -> None:
 {rows(ABOUT_RIGHT, 520, VIOLET)}
 </svg>
 """
-    save("about.svg", head(W, H, "Profile spec - now / learn / build / belief / loop / gear / fuel / coord") + body)
+    save("profile-spec.svg", head(W, H, "Profile spec - now / learn / build / belief / loop / gear / fuel / coord") + body)
 
 
 # ══════════════════════════════════════════════════════════════════════════

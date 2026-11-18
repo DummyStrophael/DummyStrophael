@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/about.svg" width="100%" alt="NOW 白天学编程，晚上折腾网络安全 · LEARN 编译器/图形学/分布式 · BUILD 一个文本阅读器 · BELIEF 优雅的抽象比聪明的代码稀缺 · LOOP 薛之谦 · GEAR VS Code / Windows Terminal / Git Bash · FUEL 冰美式 × 2 · COORD 中国" />
+  <img src="assets/profile-spec.svg" width="100%" alt="NOW 白天学编程，晚上折腾网络安全 · LEARN 编译器/图形学/分布式 · BUILD 一个文本阅读器 · BELIEF 优雅的抽象比聪明的代码稀缺 · LOOP 薛之谦 · GEAR VS Code / Windows Terminal / Git Bash · FUEL 冰美式 × 2 · COORD 中国" />
 </p>
 
 <h3 align="center"><code>⟨ 02 ⟩&nbsp; AUDIO LINK</code></h3>
