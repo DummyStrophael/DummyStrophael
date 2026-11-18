@@ -3,7 +3,6 @@
    DummyStrophael · PROFILE README  ·  theme: NIGHT CITY GRID / AUDIO LINK
    改文字  → 直接改这个文件
    改横幅 / 音乐卡 / 卡片 / 配色 → 改 build_assets.py，然后 python build_assets.py
-   上线步骤 → 使用说明.md
   ═══════════════════════════════════════════════════════════════════════
 -->
 
@@ -78,7 +77,7 @@
 </p>
 
 <details>
-  <summary><b>&lt;05&gt; ARCHIVE</b> · 我喜欢 · 前 19 首（点开）</summary>
+  <summary><b>&lt;05&gt; ARCHIVE</b> · 我喜欢 · 前 19 首</summary>
 
 <br/>
 
@@ -109,7 +108,7 @@
 </details>
 
 <details>
-  <summary><b>&lt;06&gt; TELEMETRY</b> · 数据面板（点开）</summary>
+  <summary><b>&lt;06&gt; TELEMETRY</b> · 数据面板</summary>
 
 <br/>
 
