@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="220" viewBox="0 0 1000 220" fill="none" role="img" aria-label="Now playing - 天外来物">
+<title>Now playing - 天外来物</title>
+<defs>
+  <linearGradient id="mbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0C15"/>
+    <stop offset="1" stop-color="#07070E"/>
+  </linearGradient>
+  <radialGradient id="mglow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#A78BFA" stop-opacity=".22"/>
+    <stop offset="1" stop-color="#A78BFA" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="discBg" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#1C2842"/>
+    <stop offset=".72" stop-color="#0C111C"/>
+    <stop offset="1" stop-color="#070A11"/>
+  </radialGradient>
+  <linearGradient id="mlabel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#A78BFA"/>
+    <stop offset="1" stop-color="#22D3EE"/>
+  </linearGradient>
+  <linearGradient id="mname" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#7DF9FF"/>
+  </linearGradient>
+  <linearGradient id="mprog" x1="204" y1="0" x2="724" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#A78BFA"/>
+    <stop offset=".55" stop-color="#22D3EE"/>
+    <stop offset="1" stop-color="#7DF9FF"/>
+  </linearGradient>
+  <linearGradient id="medge" x1="14" y1="0" x2="966" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0" stop-color="#22D3EE" stop-opacity="0"/>
+    <stop offset=".3" stop-color="#22D3EE" stop-opacity=".75"/>
+    <stop offset=".7" stop-color="#A78BFA" stop-opacity=".6"/>
+    <stop offset="1" stop-color="#FF2D55" stop-opacity="0"/>
+  </linearGradient>
+  <pattern id="mgrid" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0H0V26" stroke="#FFFFFF" stroke-opacity=".018"/>
+  </pattern>
+  <clipPath id="mclip">
+    <path d="M0 14Q0 0 14 0H966L1000 34V206Q1000 220 986 220H14Q0 220 0 206Z"/>
+  </clipPath>
+</defs>
+<g clip-path="url(#mclip)">
+  <rect width="1000" height="220" fill="url(#mbg)"/>
+  <rect width="1000" height="220" fill="url(#mgrid)"/>
+  <ellipse cx="112" cy="110" rx="200" ry="150" fill="url(#mglow)"/>
+</g>
+<path d="M0 14Q0 0 14 0H966L1000 34V206Q1000 220 986 220H14Q0 220 0 206Z" stroke="#1B2333"/>
+<path d="M966 0L1000 34" stroke="#22D3EE" stroke-opacity=".6" stroke-width="1.2"/>
+
+<g transform="translate(112 110)">
+  <circle r="80" stroke="#22D3EE" stroke-opacity=".22" stroke-width="1" stroke-dasharray="2 9">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360"
+                      dur="34s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="64" fill="url(#discBg)" stroke="#243049"/>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360"
+                      dur="9s" repeatCount="indefinite"/>
+    <circle r="52" stroke="#FFFFFF" stroke-opacity=".05"/>
+    <circle r="44" stroke="#FFFFFF" stroke-opacity=".06"/>
+    <circle r="36" stroke="#FFFFFF" stroke-opacity=".07"/>
+    <path d="M0 -58A58 58 0 0 1 41 -41" stroke="#22D3EE" stroke-opacity=".55" stroke-width="2"
+          stroke-linecap="round"/>
+  </g>
+  <circle r="17" fill="url(#mlabel)"/>
+  <path d="M-3.5 -6.5L7 0L-3.5 6.5Z" fill="#06070C"/>
+</g>
+
+<text x="204" y="62" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="10.5" letter-spacing="5"
+      fill="#22D3EE">NOW PLAYING</text>
+<text x="204" y="106" font-family="'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="30" font-weight="600"
+      fill="url(#mname)">天外来物</text>
+<text x="204" y="134" font-family="'Segoe UI','PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="14" letter-spacing=".5"
+      fill="#8B97AB">薛之谦</text>
+<text x="204" y="160" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="9" letter-spacing="2.6"
+      fill="#5B6B82">ALBUM · 天外来物 · 2020</text>
+
+<rect x="204" y="186" width="520" height="4" rx="2" fill="#161E2C"/>
+<rect x="204" y="186" width="338" height="4" rx="2" fill="url(#mprog)"/>
+<circle cx="542" cy="188" r="4" fill="#FFFFFF">
+  <animate attributeName="opacity" values="1;.35;1" dur="2.2s" repeatCount="indefinite"/>
+</circle>
+
+<text x="966" y="46" text-anchor="end" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="9.5"
+      letter-spacing="2.6" fill="#22D3EE">OPEN PLAYLIST ↗</text>
+<text x="760" y="92" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="9" letter-spacing="3"
+      fill="#5B6B82">SIGNAL</text>
+<rect x="760" y="110" width="7" height="40" rx="2" fill="#7DF9FF" fill-opacity="0.85"><animate attributeName="height" values="40;33;21;40" dur="1.1s" repeatCount="indefinite"/><animate attributeName="y" values="110;117;129;110" dur="1.1s" repeatCount="indefinite"/></rect><rect x="773" y="119" width="7" height="31" rx="2" fill="#7DF9FF" fill-opacity="0.79"><animate attributeName="height" values="31;21;10;31" dur="1.07s" repeatCount="indefinite"/><animate attributeName="y" values="119;129;140;119" dur="1.07s" repeatCount="indefinite"/></rect><rect x="786" y="110" width="7" height="40" rx="2" fill="#7DF9FF" fill-opacity="0.74"><animate attributeName="height" values="40;30;26;40" dur="1.46s" repeatCount="indefinite"/><animate attributeName="y" values="110;120;124;110" dur="1.46s" repeatCount="indefinite"/></rect><rect x="799" y="111" width="7" height="39" rx="2" fill="#7DF9FF" fill-opacity="0.68"><animate attributeName="height" values="39;22;27;39" dur="0.94s" repeatCount="indefinite"/><animate attributeName="y" values="111;128;123;111" dur="0.94s" repeatCount="indefinite"/></rect><rect x="812" y="124" width="7" height="26" rx="2" fill="#7DF9FF" fill-opacity="0.63"><animate attributeName="height" values="26;23;32;26" dur="1.27s" repeatCount="indefinite"/><animate attributeName="y" values="124;127;118;124" dur="1.27s" repeatCount="indefinite"/></rect><rect x="825" y="123" width="7" height="27" rx="2" fill="#7DF9FF" fill-opacity="0.57"><animate attributeName="height" values="27;35;27;27" dur="0.99s" repeatCount="indefinite"/><animate attributeName="y" values="123;115;123;123" dur="0.99s" repeatCount="indefinite"/></rect><rect x="838" y="132" width="7" height="18" rx="2" fill="#7DF9FF" fill-opacity="0.52"><animate attributeName="height" values="18;33;23;18" dur="0.96s" repeatCount="indefinite"/><animate attributeName="y" values="132;117;127;132" dur="0.96s" repeatCount="indefinite"/></rect><rect x="851" y="106" width="7" height="44" rx="2" fill="#7DF9FF" fill-opacity="0.46"><animate attributeName="height" values="44;52;14;44" dur="1.38s" repeatCount="indefinite"/><animate attributeName="y" values="106;98;136;106" dur="1.38s" repeatCount="indefinite"/></rect>
+<text x="760" y="178" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="9" letter-spacing="2.4"
+      fill="#5B6B82">1125 LIKED · 19 SHOWN</text>
+</svg>

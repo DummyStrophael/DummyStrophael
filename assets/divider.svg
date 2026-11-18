@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="46" viewBox="0 0 1280 46" fill="none" role="img" aria-label="divider">
+<title>divider</title>
+<defs>
+  <linearGradient id="dl" x1="0" y1="0" x2="640" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+    <stop offset="62%" stop-color="#22D3EE" stop-opacity=".75"/>
+    <stop offset="92%" stop-color="#22D3EE" stop-opacity=".95"/>
+    <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="dr" x1="640" y1="0" x2="1280" y2="0" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#FF2D55" stop-opacity="0"/>
+    <stop offset="8%" stop-color="#FF2D55" stop-opacity=".95"/>
+    <stop offset="38%" stop-color="#FF2D55" stop-opacity=".75"/>
+    <stop offset="100%" stop-color="#FF2D55" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<path d="M40 23H590" stroke="url(#dl)" stroke-width="1.2"/>
+<path d="M690 23H1240" stroke="url(#dr)" stroke-width="1.2"/>
+<g transform="translate(640 23)">
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360"
+                      dur="22s" repeatCount="indefinite"/>
+    <rect x="-7" y="-7" width="14" height="14" stroke="#22D3EE" stroke-opacity=".9"
+          stroke-width="1.2"/>
+  </g>
+  <rect x="-3" y="-3" width="6" height="6" fill="#FF2D55"/>
+  <circle r="15" stroke="#A78BFA" stroke-opacity=".3"/>
+</g>
+</svg>

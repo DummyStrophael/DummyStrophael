@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DummyStrophael · GitHub Profile Preview</title>
+<style>
+  :root{
+    --bg:#0d1117; --bg-subtle:#161b22; --border:#30363d; --border-muted:#21262d;
+    --fg:#e6edf3; --fg-muted:#8b949e; --accent:#58a6ff;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,
+           "PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* ── top bar ─────────────────────────────────── */
+  .topbar{height:62px;background:#010409;border-bottom:1px solid var(--border);
+          display:flex;align-items:center;gap:16px;padding:0 24px;position:sticky;top:0;z-index:5}
+  .mark{width:32px;height:32px;border-radius:50%;background:#f0f6fc;display:grid;place-items:center;flex:0 0 auto}
+  .mark svg{width:22px;height:22px;fill:#010409}
+  .search{width:300px;height:32px;border:1px solid var(--border);border-radius:6px;background:var(--bg);
+          color:var(--fg-muted);display:flex;align-items:center;padding:0 10px;gap:8px;font-size:13px}
+  .topnav{margin-left:auto;display:flex;align-items:center;gap:16px;color:var(--fg-muted);font-size:11px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#3fb950;box-shadow:0 0 8px #3fb950}
+  .hint{font-family:var(--mono);letter-spacing:1.5px;color:#6e7681}
+
+  /* ── layout ──────────────────────────────────── */
+  .page{max-width:1280px;margin:0 auto;padding:40px 24px 80px;display:grid;
+        grid-template-columns:296px minmax(0,1fr);gap:32px;align-items:start}
+  .avatar{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;
+          border:1px solid var(--border);background:#161b22}
+  .name{font-size:24px;font-weight:600;line-height:1.25;margin:16px 0 0}
+  .login{font-size:20px;font-weight:300;color:var(--fg-muted)}
+  .bio{margin:12px 0 0;font-size:16px;color:var(--fg)}
+  .follow{margin-top:16px;width:100%;height:32px;border:1px solid var(--border);border-radius:6px;
+          background:#21262d;color:var(--fg);font-size:14px;font-weight:600;cursor:default}
+  .meta{margin-top:16px;color:var(--fg-muted);font-size:14px;display:flex;flex-wrap:wrap;gap:6px 16px}
+  .meta b{color:var(--fg)}
+
+  /* ── readme card ─────────────────────────────── */
+  .card{border:1px solid var(--border);border-radius:6px;background:var(--bg);overflow:hidden}
+  .card-head{display:flex;align-items:center;gap:8px;padding:8px 16px;
+             border-bottom:1px solid var(--border);background:var(--bg-subtle);
+             font-size:12px;color:var(--fg-muted);font-family:var(--mono)}
+  .card-head .active{color:var(--fg);font-weight:600}
+  .card-head .spacer{margin-left:auto}
+  .readme{padding:32px 40px 40px}
+  .readme img{max-width:100%;vertical-align:middle}
+  .readme p{margin:0 0 16px}
+  .readme h3{margin:40px 0 8px;font-size:16px;font-weight:600;line-height:1.25;text-align:center}
+  .readme h3 code{font-size:13px;padding:4px 10px;border-radius:6px;
+                  background:rgba(110,118,129,.12);letter-spacing:1px}
+  .readme sub{font-size:13px;color:var(--fg-muted)}
+  .readme i{color:var(--fg)}
+  .readme blockquote{margin:32px 0 0;padding:0 1em;color:var(--fg-muted);
+                     border-left:.25em solid var(--border)}
+  .readme blockquote p{margin:0;line-height:1.9}
+  .readme samp{font-family:var(--mono);font-size:12px}
+
+  /* about table */
+  .about{width:100%;border-collapse:collapse;margin-top:8px}
+  .about td{width:50%;vertical-align:top;padding:4px 12px 4px 0;font-size:13px;color:#c9d1d9;line-height:2.1}
+  .about code{font-size:11.5px;padding:2px 7px;border-radius:4px;background:rgba(110,118,129,.14);
+              letter-spacing:.8px;color:#9fb3c8}
+
+  /* archive */
+  .archive{width:100%;border-collapse:collapse;margin:10px 0 0;font-size:14px;color:#c9d1d9}
+  .archive th{text-align:left;font-weight:600;font-size:12px;color:var(--fg);
+              padding:7px 13px;border:1px solid var(--border);background:#161b22}
+  .archive td{padding:6px 13px;border:1px solid var(--border);vertical-align:middle}
+  .archive td.cover{width:56px;padding:5px 13px}
+  .archive td.by{color:#8b949e;width:42%}
+  .archive img{width:38px;height:38px;border-radius:4px;display:block;border:1px solid var(--border)}
+  .archive tbody tr:nth-child(even) td{background:#0f141b}
+
+  .readme details{margin-top:26px;border:0;padding:0;background:none}
+  .readme summary{cursor:pointer;color:var(--fg);font-size:14px}
+  .readme details[open] summary{margin-bottom:4px}
+
+  .footnote{margin-top:16px;text-align:center;color:var(--fg-muted);font-size:12px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="mark">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+  </div>
+  <div class="search">Type <span style="font-family:var(--mono);opacity:.6">/</span> to search</div>
+  <div class="topnav">
+    <span class="dot"></span>
+    <span class="hint">ONLINE</span>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- profile sidebar -->
+  <aside>
+    <img class="avatar" src="assets/avatar.png" alt="DummyStrophael avatar">
+    <h1 class="name">DummyStrophael <span class="login">DummyStrophael</span></h1>
+    <p class="bio">a good man</p>
+    <button class="follow">Follow</button>
+    <div class="meta"><span><b>0</b> followers</span><span><b>0</b> following</span></div>
+  </aside>
+
+  <!-- readme -->
+  <section class="card">
+    <div class="card-head"><span class="active">README.md</span><span class="spacer"></span><span>⌥</span></div>
+    <div class="readme">
+
+      <p align="center"><img src="assets/hero.svg" width="100%" alt="DummyStrophael — SYSTEM ONLINE"></p>
+
+      <p align="center">
+        <a href="https://github.com/DummyStrophael"><img src="assets/badge-status.svg" height="32" alt="STATUS: ONLINE"></a>
+        <a href="mailto:2350645758@qq.com"><img src="assets/badge-email.svg" height="32" alt="EMAIL: 2350645758@qq.com"></a>
+        <a href="https://github.com/DummyStrophael"><img src="assets/badge-github.svg" height="32" alt="GITHUB: DummyStrophael"></a>
+      </p>
+
+      <p align="center"><img src="assets/divider.svg" width="100%" alt=""></p>
+
+      <h3><code>⟨ 01 ⟩&nbsp; WHOAMI</code></h3>
+
+      <p align="center"><img src="assets/terminal.svg" width="100%" alt="terminal — whoami"></p>
+
+      <table class="about">
+        <tr>
+          <td>
+            <code>NOW</code> · 白天写业务，晚上折腾底层<br>
+            <code>LEARN</code> · 编译器 / 图形学 / 分布式<br>
+            <code>BUILD</code> · 一个跑在自己机器上的小程序<br>
+            <code>BELIEF</code> · 优雅的抽象比聪明的代码稀缺
+          </td>
+          <td>
+            <code>LOOP</code> · 薛之谦 · 华语流行 · Lo-fi<br>
+            <code>GEAR</code> · VS Code · Windows Terminal · Git Bash<br>
+            <code>FUEL</code> · 冰美式 × 2<br>
+            <code>COORD</code> · 中国
+          </td>
+        </tr>
+      </table>
+
+      <h3><code>⟨ 02 ⟩&nbsp; AUDIO LINK</code></h3>
+
+      <p align="center">
+        <a href="playlist/index.html" title="点开听我在听什么">
+          <img src="assets/music-card.svg" width="100%" alt="Now playing — 天外来物">
+        </a>
+      </p>
+      <p align="center"><sub>1125 首收藏里播放最多的 19 首 · 点卡片进歌单页</sub></p>
+
+      <h3><code>⟨ 03 ⟩&nbsp; ARSENAL</code></h3>
+
+      <p align="center"><sub>常用武器库 · 持续升级中</sub></p>
+      <p align="center"><img src="assets/arsenal.svg" width="100%" alt="tech arsenal"></p>
+
+      <h3><code>⟨ 04 ⟩&nbsp; PROJECTS</code></h3>
+
+      <p align="center"><sub>已上线 / 施工中 · 保持更新</sub></p>
+
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td width="48%" align="center" valign="top">
+            <a href="https://github.com/DummyStrophael/Tasks"><img src="assets/project-tasks.svg" width="100%" alt="Tasks — 极客考核"></a>
+          </td>
+          <td width="4%"></td>
+          <td width="48%" align="center" valign="top">
+            <img src="assets/project-slot.svg" width="100%" alt="Next project — awaiting deployment">
+          </td>
+        </tr>
+      </table>
+
+      <p align="center"><sub>▸ 在折腾 · 手写一个能跑的小虚拟机 · 用 C++ 重写一个命令行工具 · 读完 SICP</sub></p>
+
+      <details>
+        <summary><b>&lt;05&gt; ARCHIVE</b> · 我喜欢 · 前 19 首（点开）</summary>
+        <table class="archive">
+          <thead><tr><th></th><th>曲目</th><th>歌手</th></tr></thead>
+          <tbody>
+          <tr><td class="cover"><img src="assets/covers/01.jpg" alt="最佳歌手 (Live)"></td><td>最佳歌手 (Live)</td><td class="by">薛之谦 · 许嵩</td></tr>
+          <tr><td class="cover"><img src="assets/covers/02.jpg" alt="媚人"></td><td>媚人</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/03.jpg" alt="崇拜"></td><td>崇拜</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/04.jpg" alt="我好像在哪见过你"></td><td>我好像在哪见过你</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/05.jpg" alt="一半"></td><td>一半</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/06.jpg" alt="爱好 (2024 现场)"></td><td>爱好 (2024 现场)</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/07.jpg" alt="念"></td><td>念</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/08.jpg" alt="关于你"></td><td>关于你</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/09.jpg" alt="配合"></td><td>配合</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/10.jpg" alt="火星人来过"></td><td>火星人来过</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/11.jpg" alt="Royalty"></td><td>Royalty</td><td class="by">Egzod · Maestro Chives</td></tr>
+          <tr><td class="cover"><img src="assets/covers/12.jpg" alt="锤子 (feat. 范丞丞)"></td><td>锤子 (feat. 范丞丞)</td><td class="by">KnowKnow · 范丞丞</td></tr>
+          <tr><td class="cover"><img src="assets/covers/13.jpg" alt="AI"></td><td>AI</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/14.jpg" alt="无数"></td><td>无数</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/15.jpg" alt="无名之海"></td><td>无名之海</td><td class="by">石岩</td></tr>
+          <tr><td class="cover"><img src="assets/covers/16.jpg" alt="陪你去流浪"></td><td>陪你去流浪</td><td class="by">薛之谦</td></tr>
+          <tr><td class="cover"><img src="assets/covers/17.jpg" alt="Die For You"></td><td>Die For You</td><td class="by">Grabbitz</td></tr>
+          <tr><td class="cover"><img src="assets/covers/18.jpg" alt="Teeth"></td><td>Teeth</td><td class="by">5 Seconds of Summer</td></tr>
+          <tr><td class="cover"><img src="assets/covers/19.jpg" alt="丑八怪 (Live)"></td><td>丑八怪 (Live)</td><td class="by">薛之谦</td></tr>
+          </tbody>
+        </table>
+        <p align="center" style="margin:12px 0 0"><sub>封面墙与整份歌单 → <a href="playlist/index.html">网页版歌单 ↗</a></sub></p>
+      </details>
+
+      <details>
+        <summary><b>&lt;06&gt; TELEMETRY</b> · 数据面板（点开）</summary>
+        <p align="center" style="margin-top:12px"><sub>GitHub 统计卡片 · 有提交记录后再展开更好看</sub></p>
+      </details>
+
+      <blockquote>
+        <p><samp>// 我是那种会为一个变量名纠结十分钟的人。</samp><br>
+        <samp>// 把想法写成代码，把代码变成作品。</samp></p>
+      </blockquote>
+
+      <p align="center" style="margin-top:36px"><img src="assets/footer.svg" width="100%" alt="STAY HUNGRY. STAY CURIOUS."></p>
+
+      <p align="center" class="footnote">README v3.0 · NIGHT CITY GRID · <a href="https://github.com/DummyStrophael">github.com/DummyStrophael</a></p>
+
+    </div>
+  </section>
+</main>
+</body>
+</html>

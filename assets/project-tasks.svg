@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="236" viewBox="0 0 440 236" fill="none" role="img" aria-label="TASKS project card">
+<title>TASKS project card</title>
+<defs>
+  <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0B0C15"/>
+    <stop offset="1" stop-color="#06060C"/>
+  </linearGradient>
+  <linearGradient id="cname" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset="1" stop-color="#22D3EE"/>
+  </linearGradient>
+  <radialGradient id="cglow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#22D3EE" stop-opacity=".3"/>
+    <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="cgrid" width="22" height="22" patternUnits="userSpaceOnUse">
+    <path d="M22 0H0V22" stroke="#FFFFFF" stroke-opacity=".022"/>
+  </pattern>
+</defs>
+<path d="M0 14Q0 0 14 0H406L440 34V222Q440 236 426 236H14Q0 236 0 222Z" fill="url(#cbg)" stroke="#1B2333"/>
+<path d="M0 14Q0 0 14 0H406L440 34V222Q440 236 426 236H14Q0 236 0 222Z" fill="url(#cgrid)"/>
+<ellipse cx="400" cy="20" rx="170" ry="90" fill="url(#cglow)"/>
+<path d="M406 0L440 34" stroke="#22D3EE" stroke-opacity=".7" stroke-width="1.4"/>
+<path d="M0 0H56" stroke="#22D3EE" stroke-width="2" opacity=".85"/>
+<text x="24" y="42" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="10" letter-spacing="2.4"
+      fill="#5B6B82">[ 01 ]</text>
+<rect x="374" y="26" width="46" height="18" rx="9" fill="#22D3EE" fill-opacity=".1"
+      stroke="#22D3EE" stroke-opacity=".55"/>
+<text x="397" y="38.5" text-anchor="middle" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="8.5"
+      letter-spacing="1" fill="#22D3EE">LIVE</text>
+<text x="24" y="96" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="27" font-weight="700"
+      letter-spacing="1.5" fill="url(#cname)">TASKS</text>
+<text x="24" y="132" font-family="'Segoe UI',Inter,system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="11.5" letter-spacing=".2" fill="#7E8DA3">极客考核 · 任务与笔记</text><text x="24" y="152" font-family="'Segoe UI',Inter,system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif" font-size="11.5" letter-spacing=".2" fill="#7E8DA3">Assessment tasks, written down.</text>
+
+<g>
+  <path d="M24 176H416" stroke="#1B2333"/>
+  <circle cx="30" cy="200" r="3.2" fill="#22D3EE"/>
+  <text x="42" y="204" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="10" letter-spacing="1.8"
+        fill="#6F7F96">MARKDOWN</text>
+  <text x="416" y="205" text-anchor="end" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="16"
+        fill="#22D3EE">↗</text>
+</g>
+</svg>
