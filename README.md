@@ -74,7 +74,7 @@
 </table>
 
 <p align="center">
-  <sub>▸ 在折腾 · 手写一个能跑的小虚拟机 · 用 C++ 重写一个命令行工具 · 读完 SICP</sub>
+  <sub>▸ 在折腾 · 给VMware装黑苹果</sub>
 </p>
 
 <details>
