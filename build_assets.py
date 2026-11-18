@@ -344,7 +344,7 @@ def hero() -> None:
 # ══════════════════════════════════════════════════════════════════════════
 def terminal() -> None:
     W, H = 1000, 300
-    CYCLE = 14.0
+    CYCLE = 20.0
     lines = [
         ("prompt", "whoami", 0.5),
         ("out", f'{USER} · {ROLE} · "{TAGLINE}"', 1.1),
@@ -359,7 +359,7 @@ def terminal() -> None:
     y = 84
     for kind, text, at in lines:
         appear = min(at / CYCLE, 0.9)
-        kt = f"0;{appear:.3f};{appear + 0.015:.3f};.94;.97;1"
+        kt = f"0;{appear:.3f};{appear + 0.015:.3f};.96;.985;1"
         vals = "0;0;1;1;0;0"
         if kind == "prompt":
             inner = (
@@ -618,7 +618,13 @@ def arsenal() -> None:
     <stop offset=".5" stop-color="{VIOLET}" stop-opacity=".28"/>
     <stop offset="1" stop-color="{CRIMSON}" stop-opacity=".3"/>
   </linearGradient>
+  <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0A0A12"/>
+    <stop offset="1" stop-color="#07070E"/>
+  </linearGradient>
 </defs>
+<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="12" fill="url(#abg)" stroke="{EDGE}"/>
+<rect x="120" y=".5" width="760" height="1" fill="url(#aglow)" opacity=".55"/>
 {"".join(rows)}
 </svg>
 """
@@ -808,8 +814,13 @@ def footer() -> None:
     <stop offset=".55" stop-color="{MINT}" stop-opacity=".9"/>
     <stop offset="1" stop-color="{VIOLET}" stop-opacity=".95"/>
   </linearGradient>
+  <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0A0A12"/>
+    <stop offset="1" stop-color="#07070E"/>
+  </linearGradient>
 </defs>
-<rect x="120" y="10" width="1040" height="1" fill="url(#fl)"/>
+<rect x=".5" y=".5" width="1279" height="159" rx="12" fill="url(#fbg)" stroke="{EDGE}"/>
+<rect x="120" y="8" width="1040" height="1" fill="url(#fl)"/>
 <text x="640" y="34" text-anchor="middle" font-family="{MONO}" font-size="10.5"
       letter-spacing="4" fill="#6B7C93">© 2026 {USER.upper()} — ALL SYSTEMS NOMINAL</text>
 <text x="640" y="76" text-anchor="middle" font-family="{MONO}" font-size="19"

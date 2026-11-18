@@ -12,8 +12,13 @@
     <stop offset=".55" stop-color="#7DF9FF" stop-opacity=".9"/>
     <stop offset="1" stop-color="#A78BFA" stop-opacity=".95"/>
   </linearGradient>
+  <linearGradient id="fbg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0A0A12"/>
+    <stop offset="1" stop-color="#07070E"/>
+  </linearGradient>
 </defs>
-<rect x="120" y="10" width="1040" height="1" fill="url(#fl)"/>
+<rect x=".5" y=".5" width="1279" height="159" rx="12" fill="url(#fbg)" stroke="#1B2333"/>
+<rect x="120" y="8" width="1040" height="1" fill="url(#fl)"/>
 <text x="640" y="34" text-anchor="middle" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="10.5"
       letter-spacing="4" fill="#6B7C93">© 2026 DUMMYSTROPHAEL — ALL SYSTEMS NOMINAL</text>
 <text x="640" y="76" text-anchor="middle" font-family="'Cascadia Mono','JetBrains Mono',Consolas,'SF Mono',Menlo,monospace" font-size="19"
